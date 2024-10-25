@@ -1,7 +1,18 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+	images: {
+		remotePatterns: [
+			{ protocol: 'https', hostname: 'ik.imagekit.io' },
+			{
+				protocol: 'https',
+				hostname: 'storage.googleapis.com',
+				port: '',
+				pathname: '/polebor/site/media/original/**',
+			},
+			{ protocol: 'https', hostname: 'mp.softly.uz' },
+		],
+	},
+}
 
-export default nextConfig;
+export default nextConfig
